@@ -1,19 +1,21 @@
 # rag-workflow
 
+The content of the English Version is from the translation using Gemini.
+
 <details>
 <summary> English Version</summary>
 
-### This is the English content
+### This is the English Version
 
 0.When building a knowledge base, the first step is to consider whether RAG is truly necessary. If the knowledge base is smaller than 200k tokens (approximately 500 pages of material), you can directly include the entire knowledge base in the prompt given to the model, without needing RAG.
 
-1.Data Preprocessing
+1.Data Preprocessing<br>
 Terminology normalization or acronym expansion.
 
-2.Metadata Mapping
+2.Metadata Mapping<br>
 Add metadata fields to the raw data, in JSON format, including fields like "source path," "year," etc.
 
-3.Chunking
+3.Chunking<br>
 For TXT files with simple document structures, directly split by a fixed number of characters; an optional method is using a text splitter.
 For TXT files with complex document structures and multiple delimiters like newlines or spaces, use Recursive Character Text Splitter, which offers more flexible, non-fixed size splitting.
 For Documents, such as those containing PDFs, images, tables, or code (Markdown, Python, JS are somewhat similar to Recursive Character splitting but with different delimiters): use Unstructured to extract data. For multimodal data (text+image), use models like GPT-4V, LLaVA, or FUYU-8b to generate text summaries for images, then embed and store them in a vector DB; alternatively, use CLIP to generate image embeddings.
@@ -21,25 +23,25 @@ For semantic-level chunking, one method is to split by sentences (e.g., at perio
 Agentic chunking (intelligent splitting): For example, LangHub's wfh/proposal-indexing uses carefully crafted prompts to guide an LLM in the splitting process.
 Enhancing expressiveness: Add context to chunks through padding or prompt engineering.
 
-4.Embedding / Generating Embeddings
+4.Embedding / Generating Embeddings<br>
 Preparation for subsequent dense retrieval. Optional Embedding models: Sentence Transformers (e.g., all-MiniLM-*, Sentence-BERT). After generation, store in a Vector DB (vector database) like Chroma or FAISS.
 
-5.Query Reformulation
+5.Query Reformulation<br>
 Optional models: seq-to-seq architecture, BART.
 
-6.Retrieval: Sparse + Dense
+6.Retrieval: Sparse + Dense<br>
 Sparse: Keyword-based retrieval, also known as term frequency-based retrieval, TF-IDF, e.g., BM25.
 Dense: Semantic-based retrieval, e.g., building an index with FAISS and calculating the L2 distance between the embeddings of the query and documents.
 Alternatively, cosine similarity search can be used to calculate the similarity of TF-IDF vectors or word embeddings.
 
-7.Reranking
+7.Reranking<br>
 MMR (Maximal Marginal Relevance): Ensures relevance while increasing diversity.
 Use a cross-encoder (e.g., ms-marco-MiniLM-*) with a pair of inputs (query and initially retrieved document) to calculate their relevance or similarity score. These models are slower but more accurate than BM25 and L2 distance.
 
-8.Filtering
+8.Filtering<br>
 Based on metadata, rerank or filter out results that do not conform to the query, e.g., sort descending, age > 18, production date > 20250515.
 
-9.Evaluation
+9.Evaluation<br>
 Evaluate the effectiveness of "R" in RAG (Retrieval Quality): 1. Hit Rate, 2. Mean Reciprocal Rank (MRR), 3. Precision, 4. Recall, 5. NDCG (Normalized Discounted Cumulative Gain).
 Then, "G" (Generation Quality): 1. Faithfulness, 2. Answer Relevance, 3. Context Relevance/Utilization, 4. Answer Correctness, 5. Fluency, 6. Conciseness, 7. Harmlessness.
 End-to-End System Performance: 1. User Satisfaction, 2. Task Completion Rate, 3. No Answer Rate / Rejection Rate, 4. Response Time / Latency, 5. Throughput.
