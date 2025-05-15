@@ -1,4 +1,4 @@
-# rag-workflow
+![image](https://github.com/user-attachments/assets/734517b2-bdda-4fd1-a2b2-f60d9c776a76)# rag-workflow
 
 The content of the English Version is from the translation using Gemini.
 
@@ -92,3 +92,13 @@ Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B T
 ○ 端到端系统性能：1用户满意度、2任务完成率、3无法回答率、4响应时间/延迟、5吞吐量。<br>
 ○ 运营和成本指标：1计算成本、2数据更新与维护成本、3可扩展性、4鲁棒性。<br>
 评估策略和工具：人工、黄金数据集、RAGAS、AB 测试、LLM。
+
+The above content I collected and written.
+Welcome to **star** and follow my social media: [小红书]([链接地址](https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447)).
+
+References:
+NO.0 point: https://www.anthropic.com/news/contextual-retrieval<br>
+Chunk: https://weaviate.io/blog/advanced-rag#3-fine-tuning-embedding-models<br>
+https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/tutorials/LevelsOfTextSplitting/5_Levels_Of_Text_Splitting.ipynb<br>
+https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_structured_and_multi_modal_RAG.ipynb<br>
+Metadata: https://medium.com/@lorevanoudenhove/enhancing-rag-performance-with-metadata-the-power-of-self-query-retrievers-e29d4eecdb73
