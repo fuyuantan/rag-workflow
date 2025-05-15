@@ -96,9 +96,10 @@ Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B T
 The above content I collected and written.
 Welcome to **star** and follow my social media: [小红书]([链接地址](https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447)).
 
-References:
-NO.0 point: https://www.anthropic.com/news/contextual-retrieval<br>
-Chunk: https://weaviate.io/blog/advanced-rag#3-fine-tuning-embedding-models<br>
+References:<br>
+NO.0: https://www.anthropic.com/news/contextual-retrieval<br>
+Chunk:<br>
+https://weaviate.io/blog/advanced-rag#3-fine-tuning-embedding-models<br>
 https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/tutorials/LevelsOfTextSplitting/5_Levels_Of_Text_Splitting.ipynb<br>
 https://github.com/langchain-ai/langchain/blob/master/cookbook/Semi_structured_and_multi_modal_RAG.ipynb<br>
 Metadata: https://medium.com/@lorevanoudenhove/enhancing-rag-performance-with-metadata-the-power-of-self-query-retrievers-e29d4eecdb73
