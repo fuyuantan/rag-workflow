@@ -44,10 +44,6 @@ Based on metadata, rerank or filter out results that do not conform to the query
 Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B Testing, LLM-as-a-judge
 
 ---
-
-<details>
-<summary> Chinese Version</summary>
-
 ### This is the Chinese Version
 
 0.当我们搭建一个知识库时，第一步是考虑是否真的要用到 RAG。当知识库小于 200k tokens（约 500 页材料），直接将整个知识库包含在你给模型的提示中即可，无需RAG。
@@ -90,8 +86,6 @@ Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B T
 ○ 端到端系统性能：1用户满意度、2任务完成率、3无法回答率、4响应时间/延迟、5吞吐量。<br>
 ○ 运营和成本指标：1计算成本、2数据更新与维护成本、3可扩展性、4鲁棒性。<br>
 评估策略和工具：人工、黄金数据集、RAGAS、AB 测试、LLM。
-
-</details>
 
 The above content I collected and written.
 Welcome to **star** this repo and follow my social media: [小红书](https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447).
