@@ -16,11 +16,11 @@ Terminology normalization or acronym expansion.
 Add metadata fields to the raw data, in JSON format, including fields like "source path," "year," etc.
 
 3.Chunking<br>
-For TXT files with simple document structures, directly split by a fixed number of characters; an optional method is using a text splitter.
-For TXT files with complex document structures and multiple delimiters like newlines or spaces, use Recursive Character Text Splitter, which offers more flexible, non-fixed size splitting.
-For Documents, such as those containing PDFs, images, tables, or code (Markdown, Python, JS are somewhat similar to Recursive Character splitting but with different delimiters): use Unstructured to extract data. For multimodal data (text+image), use models like GPT-4V, LLaVA, or FUYU-8b to generate text summaries for images, then embed and store them in a vector DB; alternatively, use CLIP to generate image embeddings.
-For semantic-level chunking, one method is to split by sentences (e.g., at periods), then compare the similarity of consecutive sentences to find points of significant difference and split there.
-Agentic chunking (intelligent splitting): For example, LangHub's wfh/proposal-indexing uses carefully crafted prompts to guide an LLM in the splitting process.
+For TXT files with simple document structures, directly split by a fixed number of characters; an optional method is using a text splitter.<br>
+For TXT files with complex document structures and multiple delimiters like newlines or spaces, use Recursive Character Text Splitter, which offers more flexible, non-fixed size splitting.<br>
+For Documents, such as those containing PDFs, images, tables, or code (Markdown, Python, JS are somewhat similar to Recursive Character splitting but with different delimiters): use Unstructured to extract data. For multimodal data (text+image), use models like GPT-4V, LLaVA, or FUYU-8b to generate text summaries for images, then embed and store them in a vector DB; alternatively, use CLIP to generate image embeddings.<br>
+For semantic-level chunking, one method is to split by sentences (e.g., at periods), then compare the similarity of consecutive sentences to find points of significant difference and split there.<br>
+Agentic chunking (intelligent splitting): For example, LangHub's wfh/proposal-indexing uses carefully crafted prompts to guide an LLM in the splitting process.<br>
 Enhancing expressiveness: Add context to chunks through padding or prompt engineering.
 
 4.Embedding / Generating Embeddings<br>
@@ -30,22 +30,22 @@ Preparation for subsequent dense retrieval. Optional Embedding models: Sentence 
 Optional models: seq-to-seq architecture, BART.
 
 6.Retrieval: Sparse + Dense<br>
-Sparse: Keyword-based retrieval, also known as term frequency-based retrieval, TF-IDF, e.g., BM25.
-Dense: Semantic-based retrieval, e.g., building an index with FAISS and calculating the L2 distance between the embeddings of the query and documents.
-Alternatively, cosine similarity search can be used to calculate the similarity of TF-IDF vectors or word embeddings.
+Sparse: Keyword-based retrieval, also known as term frequency-based retrieval, TF-IDF, e.g., BM25.<br>
+Dense: Semantic-based retrieval, e.g., building an index with FAISS and calculating the L2 distance between the embeddings of the query and documents.<br>
+Alternatively, cosine similarity search can be used to calculate the similarity of TF-IDF vectors or word embeddings.<br>
 
 7.Reranking<br>
-MMR (Maximal Marginal Relevance): Ensures relevance while increasing diversity.
+MMR (Maximal Marginal Relevance): Ensures relevance while increasing diversity.<br>
 Use a cross-encoder (e.g., ms-marco-MiniLM-*) with a pair of inputs (query and initially retrieved document) to calculate their relevance or similarity score. These models are slower but more accurate than BM25 and L2 distance.
 
 8.Filtering<br>
 Based on metadata, rerank or filter out results that do not conform to the query, e.g., sort descending, age > 18, production date > 20250515.
 
 9.Evaluation<br>
-Evaluate the effectiveness of "R" in RAG (Retrieval Quality): 1. Hit Rate, 2. Mean Reciprocal Rank (MRR), 3. Precision, 4. Recall, 5. NDCG (Normalized Discounted Cumulative Gain).
-Then, "G" (Generation Quality): 1. Faithfulness, 2. Answer Relevance, 3. Context Relevance/Utilization, 4. Answer Correctness, 5. Fluency, 6. Conciseness, 7. Harmlessness.
-End-to-End System Performance: 1. User Satisfaction, 2. Task Completion Rate, 3. No Answer Rate / Rejection Rate, 4. Response Time / Latency, 5. Throughput.
-Operational and Cost Metrics: 1. Computational Cost, 2. Data Update & Maintenance Cost, 3. Scalability, 4. Robustness.
+Evaluate the effectiveness of "R" in RAG (Retrieval Quality): 1. Hit Rate, 2. Mean Reciprocal Rank (MRR), 3. Precision, 4. Recall, 5. NDCG (Normalized Discounted Cumulative Gain).<br>
+Then, "G" (Generation Quality): 1. Faithfulness, 2. Answer Relevance, 3. Context Relevance/Utilization, 4. Answer Correctness, 5. Fluency, 6. Conciseness, 7. Harmlessness.<br>
+End-to-End System Performance: 1. User Satisfaction, 2. Task Completion Rate, 3. No Answer Rate / Rejection Rate, 4. Response Time / Latency, 5. Throughput.<br>
+Operational and Cost Metrics: 1. Computational Cost, 2. Data Update & Maintenance Cost, 3. Scalability, 4. Robustness.<br>
 Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B Testing, LLM-as-a-judge
 
 </details>
