@@ -94,7 +94,7 @@ Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B T
 评估策略和工具：人工、黄金数据集、RAGAS、AB 测试、LLM。
 
 The above content I collected and written.
-Welcome to **star** this repo and follow my social media: [小红书]((https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447).
+Welcome to **star** this repo and follow my social media: [小红书](https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447).
 
 References:<br>
 NO.0: https://www.anthropic.com/news/contextual-retrieval<br>
