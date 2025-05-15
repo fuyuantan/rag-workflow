@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/734517b2-bdda-4fd1-a2b2-f60d9c776a76)# rag-workflow
+# rag-workflow
 
 The content of the English Version is from the translation using Gemini.
 
