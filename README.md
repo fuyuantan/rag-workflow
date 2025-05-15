@@ -2,11 +2,6 @@
 
 The content of the English Version is from the translation using Gemini.
 
-<details>
-<summary> English Version</summary>
-
-### This is the English Version
-
 0.When building a knowledge base, the first step is to consider whether RAG is truly necessary. If the knowledge base is smaller than 200k tokens (approximately 500 pages of material), you can directly include the entire knowledge base in the prompt given to the model, without needing RAG.
 
 1.Data Preprocessing<br>
@@ -23,7 +18,7 @@ Add metadata fields to the raw data, in JSON format, including fields like "sour
 ○ Agentic chunking (intelligent splitting): For example, LangHub's wfh/proposal-indexing uses carefully crafted prompts to guide an LLM in the splitting process.<br>
 Enhancing expressiveness: Add context to chunks through padding or prompt engineering.
 
-4.Embedding / Generating Embeddings<br>
+4.Embedding<br>
 Preparation for subsequent dense retrieval. Optional Embedding models: Sentence Transformers (e.g., all-MiniLM-*, Sentence-BERT). After generation, store in a Vector DB (vector database) like Chroma or FAISS.
 
 5.Query Reformulation<br>
@@ -48,9 +43,12 @@ Based on metadata, rerank or filter out results that do not conform to the query
 ○ Operational and Cost Metrics: 1. Computational Cost, 2. Data Update & Maintenance Cost, 3. Scalability, 4. Robustness.<br>
 Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B Testing, LLM-as-a-judge
 
-</details>
-
 ---
+
+<details>
+<summary> Chinese Version</summary>
+
+### This is the Chinese Version
 
 0.当我们搭建一个知识库时，第一步是考虑是否真的要用到 RAG。当知识库小于 200k tokens（约 500 页材料），直接将整个知识库包含在你给模型的提示中即可，无需RAG。
 	
@@ -92,6 +90,8 @@ Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B T
 ○ 端到端系统性能：1用户满意度、2任务完成率、3无法回答率、4响应时间/延迟、5吞吐量。<br>
 ○ 运营和成本指标：1计算成本、2数据更新与维护成本、3可扩展性、4鲁棒性。<br>
 评估策略和工具：人工、黄金数据集、RAGAS、AB 测试、LLM。
+
+</details>
 
 The above content I collected and written.
 Welcome to **star** this repo and follow my social media: [小红书](https://www.xiaohongshu.com/user/profile/5ee64a640000000001001447).
