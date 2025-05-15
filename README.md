@@ -77,10 +77,10 @@ Evaluation Strategies and Tools: Human evaluation, Golden Datasets, RAGAS, A/B T
 6.Retrieval 检索  稀疏+稠密<br>
 ○ 稀疏：基于关键词检索，也称为基于词频检索，TF-IDF，如BM25。<br>
 ○ 稠密：基于语义检索，如 FAISS 建立索引，计算 Embedding后的 query 和 文档的 L2距离。<br>
-也可以，cosine similarity search 余弦相似度，可以计算 TF-IDF 向量 或 词嵌入 的相似性。<br>
+也可以，cosine similarity search 余弦相似度，可以计算 TF-IDF 向量 或 词嵌入 的相似性。
  
 7.Rerank 重排<br>
-○ MMR（Maximal Marginal Relevance，最大边界相关性）：保证相关性的同时，提高多样性。
+○ MMR（Maximal Marginal Relevance，最大边界相关性）：保证相关性的同时，提高多样性。<br>
 ○ 将一对输入（query和初次检索到的文档），使用 cross-encoder (交叉编码器，如ms-marco-MiniLM-*) ，计算它们的相关性或相似性得分。这种模型速度比较慢，但比 BM25 和L2 距离更精确。
  
 8.Filter 过滤<br>
