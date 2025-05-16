@@ -1,7 +1,5 @@
 # rag-workflow
 
-The content of the English Version is from the translation using Gemini.
-
 0.When building a knowledge base, the first step is to consider whether RAG is truly necessary. If the knowledge base is smaller than 200k tokens (approximately 500 pages of material), you can directly include the entire knowledge base in the prompt given to the model, without needing RAG.
 
 1.Data Preprocessing<br>
